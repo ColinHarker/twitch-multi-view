@@ -1,33 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-import ReactPlayer from "react-player"
+import StreamWrapper from './components/streamWrapper';
+import Chat from './components/chat';
+import Button from './components/button';
+import data from "./data.json";
 
 
 function App() {
+
   return (
     <div className="App">
-      <div>
-        <ReactPlayer
-          url="https://www.twitch.tv/summit1g"
-          controls
-        />
+
+      <header className="App-header"></header>
+      <div className="Body">
+        <div className="Stream-wrapper">
+          <StreamWrapper data={data} />
+        </div>
+        <div>
+          <Button btnColor="#18181b" onClick={Test} type="outline">
+            Add Stream
+          </Button>
+          <Chat />
+        </div>
       </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
+}
+
+function Test() {
+  var username = prompt('enter name');
+  console.log(username);
 }
 
 export default App;
