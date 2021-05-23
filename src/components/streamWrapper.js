@@ -14,14 +14,14 @@ const StreamWrapper = ({ data }) => {
                     <Stream
                         onMouseEnter={() => setIsShown(true)}
                         onMouseLeave={() => setIsShown(false)}
-                        key={stream.key} stream={stream.name} />
+                        key={stream.id} stream={stream.name} />
                 )
             })}
             {isShown && (
                 <div>
                     I'll appear when you hover over the button.
                 </div>
-            )}
+            ) && console.log("yes")}
         </div>
     );
 };

@@ -2,6 +2,8 @@ import React from 'react'
 
 const EMBED_URL = 'https://embed.twitch.tv/embed/v1.js';
 
+//const PARENT_LINK = __DEV__ ? 'localhost' : 'www.twitchmultiview.tv';
+
 
 class Stream extends React.Component {
     componentDidMount() {
