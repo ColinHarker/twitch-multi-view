@@ -1,0 +1,21 @@
+.holder{
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.holder:hover + .bar{
+  display: flex;
+}
+
+.bar{
+    position: absolute;
+    display: flex; /*set to none */
+    justify-content: flex-end;
+    float: right;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    transition: 30ms;
+}

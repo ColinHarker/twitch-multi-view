@@ -1,9 +1,8 @@
 import React from 'react'
+import { MDBBtn } from 'mdb-react-ui-kit'
+import './stream.css'
 
 const EMBED_URL = 'https://embed.twitch.tv/embed/v1.js';
-
-//const PARENT_LINK = __DEV__ ? 'localhost' : 'www.twitchmultiview.tv';
-
 
 class Stream extends React.Component {
     componentDidMount() {
@@ -15,15 +14,18 @@ class Stream extends React.Component {
         document.body.appendChild(script);
     }
 
-    render() {
 
-        const source = {};
-        console.log(source);
+    render() {
         return (
             <div>
-                <div>
+                <div className="holder">
+                    <div className="bar">
+                        <MDBBtn className="btn-close btn-close-white" color="none" aria-label="Close"></MDBBtn>
+                    </div>
+
                     <iframe
-                        src={`https://player.twitch.tv/?channel=${this.props.stream}&parent=localhost`}
+                        className="frame"
+                        src={`https://player.twitch.tv/?channel=${this.props.stream}&parent=${this.props.parent}`}
                         height="540"
                         width="960"
                         allowFullScreen={false}
