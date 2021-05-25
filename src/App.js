@@ -10,14 +10,52 @@ const initList = {
   streamList: [
     {
       "id": 1,
-      "name": "kyliebitkin"
+      "name": "timmac"
     },
     {
       "id": 2,
-      "name": "buddha"
+      "name": "kyle"
+    },
+    {
+      "id": 3,
+      "name": "anthonyz"
+    },
+    {
+      "id": 4,
+      "name": "shroud"
     }
   ]
 }
+/*,
+      {
+        "id": 3,
+        "name": "ratedepicz"
+      },
+      {
+        "id": 4,
+        "name": "xqcow"
+      },
+      {
+        "id": 5,
+        "name": "timmac"
+      },
+      {
+        "id": 6,
+        "name": "summit1g"
+      },
+      {
+        "id": 7,
+        "name": "ray__c"
+      },
+      {
+        "id": 8,
+        "name": "blaustoise"
+      },
+      {
+        "id": 9,
+        "name": "nikez"
+      }
+      */
 
 const listReducer = (state, action) => {
 

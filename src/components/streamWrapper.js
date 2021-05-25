@@ -14,6 +14,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 const StreamWrapper = ({ data }) => {
     const [isShown, setIsShown] = useState(false);
 
+    const numOfStreams = data.length;
 
     return (
         <div className="Stream-display">
@@ -22,7 +23,7 @@ const StreamWrapper = ({ data }) => {
                     <Stream
                         onMouseEnter={() => setIsShown(true)}
                         onMouseLeave={() => setIsShown(false)}
-                        key={stream.id} stream={stream.name} parent={PARENT_LINK} />
+                        number={numOfStreams} key={stream.id} stream={stream.name} parent={PARENT_LINK} />
                 )
             })}
             {isShown && (

@@ -20,7 +20,7 @@ class Chat extends React.Component {
             <div>
                 <div>
                     <iframe id="twitch-chat-embed"
-                        src="https://www.twitch.tv/embed/buddha/chat?darkpopout&parent=localhost"
+                        src="https://www.twitch.tv/embed/kyle/chat?darkpopout&parent=localhost"
                         height={height}
                         width="350"
                         frameBorder="0">
