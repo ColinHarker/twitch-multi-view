@@ -15,15 +15,8 @@ const initList = {
     {
       "id": 2,
       "name": "kyle"
-    },
-    {
-      "id": 3,
-      "name": "anthonyz"
-    },
-    {
-      "id": 4,
-      "name": "shroud"
     }
+
   ]
 }
 /*,
@@ -93,8 +86,8 @@ function App() {
     var username = prompt('Enter Stream Name');
     console.log(username);
     if (username != null) {
-      handleListChange(username);
-      handleListAdd();
+      //handleListChange(username);
+      //handleListAdd();
     }
   }
 

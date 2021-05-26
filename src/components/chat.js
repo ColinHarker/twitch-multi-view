@@ -19,6 +19,9 @@ class Chat extends React.Component {
         return (
             <div>
                 <div>
+                    hello
+                </div>
+                <div>
                     <iframe id="twitch-chat-embed"
                         src="https://www.twitch.tv/embed/kyle/chat?darkpopout&parent=localhost"
                         height={height}

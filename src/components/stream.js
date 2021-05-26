@@ -17,10 +17,6 @@ class Stream extends React.Component {
 
     render() {
 
-        function test() {
-            console.log("hover");
-        }
-
         function calcHeight(width) {
             return width / 1.7777;
         }
@@ -52,16 +48,22 @@ class Stream extends React.Component {
                 throw new console.error();
         }
 
+        var m_streamName = this.props.stream;
+
+        function HandleCloseStream() {
+            console.log("Trying to close " + m_streamName);
+        }
+
         return (
             <div>
                 <div className="holder">
                     <div className="bar">
-                        <MDBBtn onHover className="btn-close btn-close-white" color="none" aria-label="Close"></MDBBtn>
+                        <MDBBtn onMouseEnter={() => { console.log(`Mouse hover ${m_streamName} close button`) }} onClick={() => { HandleCloseStream() }} className="btn-close btn-close-white" color="none" aria-label="Close"></MDBBtn>
                     </div>
 
                     <iframe
                         className="frame"
-                        src={`https://player.twitch.tv/?channel=${this.props.stream}&parent=${this.props.parent}`}
+                        src={`https://player.twitch.tv/?channel=${m_streamName}&parent=${this.props.parent}`}
                         height={m_height}
                         width={m_width}
                         allowFullScreen={false}
